@@ -36,15 +36,21 @@ export const App = () => {
 
     switch (BTN_TEXT_CONTENT) {
       case 'good':
-        setGood(good + 1);
+        setGood(prevState => {
+          return prevState + 1;
+        });
         break;
 
       case 'neutral':
-        setNeutral(neutral + 1);
+        setNeutral(prevState => {
+          return prevState + 1;
+        });
         break;
 
       case 'bad':
-        setBad(bad + 1);
+        setBad(prevState => {
+          return prevState + 1;
+        });
         break;
 
       default:
